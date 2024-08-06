@@ -4,7 +4,7 @@ import cv2
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
 # Load the image
-image_path = 'Parliment.jpg'  # Replace with your image path
+image_path = 'Parliment2.jpg'  # Replace with your image path
 image = cv2.imread(image_path)
 
 # Convert the image to grayscale
@@ -22,7 +22,7 @@ for idx, (x, y, w, h) in enumerate(faces):
     cv2.putText(image, label, (text_x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 255, 180), 2)  # Pink text
 
 # Save the output image
-output_path = 'output_Parliment.jpg'
+output_path = 'output_Parliment2.jpg'
 cv2.imwrite(output_path, image)
 
 print(f"Output image saved as {output_path}")
